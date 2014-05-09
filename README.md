@@ -14,10 +14,13 @@ Why? [Sometimes it](http://css-tricks.com/svg-sprites-use-better-icon-fonts/)
 [makes sense](http://www.yottaa.com/blog/bid/306224/Inlining-for-Performance-When-to-Let-the-Cache-Go), 
 performance or workflow wise, to inline resources instead of requesting them.
 
-*Understand that inserting filedata in your templates, especially when passing it through Twig's raw filter, 
+
+Warning
+---
+Understand that inserting filedata in your templates, especially when passing it through Twig's raw filter, 
 is a potential security risk. And the path is relative to your document root, so the path could point to a 
 file anywhere on your server. **Make sure you never, ever let a third party control what is inserted.** 
-In case you're thinking "meh", insert this into your template:*
+In case you're thinking "meh", insert this into your template:
    
     {{ craft.inlin.er('/../craft/config/db.php') | raw }}
 

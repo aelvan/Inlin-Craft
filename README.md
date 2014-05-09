@@ -10,7 +10,7 @@ Use it like this:
  
     <script src="{{ craft.inlin.er('/build/svg/my.svg') | raw }}"></script> 
 
-Why? [Sometimes it](http://css-tricks.com/svg-sprites-use-better-icon-fonts/) 
+Why? [Sometimes](http://css-tricks.com/svg-sprites-use-better-icon-fonts/) it 
 [makes sense](http://www.yottaa.com/blog/bid/306224/Inlining-for-Performance-When-to-Let-the-Cache-Go), 
 performance or workflow wise, to inline resources instead of requesting them.
 

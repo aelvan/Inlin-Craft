@@ -1,7 +1,7 @@
 Inlin for Craft
 ===========
 
-A tiny plugin for inlining files in Craft templates, very similar to PHP's native [`file_put_contents()`](http://php.net/manual/en/function.file-put-contents.php) function.
+A tiny plugin for inlining files in Craft templates, very similar to PHP's native [`file_get_contents()`](http://php.net/manual/en/function.file-put-contents.php) function.
 
 
 Usage

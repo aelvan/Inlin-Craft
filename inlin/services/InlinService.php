@@ -1,7 +1,10 @@
 <?php
-namespace Craft;
+namespace craft\plugins\inlin\services;
 
-class InlinService extends BaseApplicationComponent
+use Craft;
+use craft\app\base\Component;
+
+class InlinService extends Component
 {
 
 	var $settings = array();
@@ -11,7 +14,6 @@ class InlinService extends BaseApplicationComponent
 	 *
 	 * @param $name String Setting name
 	 * @return mixed Setting value
-	 * @author André Elvan
 	*/
 	public function getSetting($name) {
 		$this->settings = $this->_init_settings();
@@ -19,15 +21,13 @@ class InlinService extends BaseApplicationComponent
 	}
 
 	/**
-	 * Gets Stamp settings from config
+	 * Gets Inlin settings from config
 	 *
 	 * @return array Array containing all settings
-	 * @author André Elvan
 	*/
 	private function _init_settings() {
 		$settings = array();
-		$settings['inlinPublicRoot'] = craft()->config->get('inlinPublicRoot');
-
+		$settings['inlinPublicRoot'] = Craft::$app->config->get('inlinPublicRoot');
 		return $settings;
 	}
 

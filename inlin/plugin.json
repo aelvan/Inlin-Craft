@@ -1,0 +1,14 @@
+{
+    "name": "Inlin",
+    "version": "2.0.0",
+    "schemaVersion": "1.0.0",
+    "developer": "André Elvan",
+    "developerUrl": "http://vaersaagod.no",
+    "description": "A simple plugin for inlining stuff in your templates.",
+    "documentationUrl": "https://github.com/aelvan/Inlin-Craft/blob/craft3/README.md",
+    "releaseFeedUrl": "https://raw.githubusercontent.com/aelvan/Inlin-Craft/craft3/releases.json",
+    "class": "craft\\plugins\\inlin\\Inlin",
+    "components": {
+        "inlin": "craft\\plugins\\inlin\\services\\InlinService"
+    }
+}

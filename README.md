@@ -44,8 +44,4 @@ path. You can configure the path by setting the inlinPublicRoot setting in your 
 
 Changelog
 ---
-### Version 1.1
- - Added ability to pull remote files
-
-### Version 1.0
- - Initial release
+See [releases.json](https://raw.githubusercontent.com/aelvan/Inlin-Craft/master/releases.json).

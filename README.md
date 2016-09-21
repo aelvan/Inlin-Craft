@@ -1,4 +1,4 @@
-Inlin for Craft
+Inlin for Craft 3
 ===========
 
 A tiny plugin for inlining files in Craft templates.

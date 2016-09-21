@@ -44,4 +44,4 @@ path. You can configure the path by setting the inlinPublicRoot setting in your 
 
 Changelog
 ---
-See [releases.json](https://raw.githubusercontent.com/aelvan/Inlin-Craft/master/releases.json).
+See [releases.json](https://raw.githubusercontent.com/aelvan/Inlin-Craft/craft3/releases.json).

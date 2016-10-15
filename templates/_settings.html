@@ -1,0 +1,20 @@
+{% import '_includes/forms' as forms %}
+
+<h1>Inlin Settings</h1>
+
+<div class="inlin-field-container">
+{{ forms.textField({
+  label: "Public Root"|t,
+  id: 'inlinPublicRoot',
+  name: 'inlinPublicRoot',
+  value: settings.inlinPublicRoot,
+  errors: settings.getErrors('inlinPublicRoot')
+}) }}
+{{ forms.textField({
+  label: "Cache Duration"|t,
+  id: 'cacheDuration',
+  name: 'cacheDuration',
+  value: settings.cacheDuration,
+  errors: settings.getErrors('cacheDuration')
+}) }}
+</div>

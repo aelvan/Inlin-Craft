@@ -3,6 +3,7 @@ Inlin for Craft
 
 A tiny plugin for inlining files in Craft templates.
 
+*This is the Craft 2.x version of Inlin, for the Craft 3.x version see the [craft3 branch](https://github.com/aelvan/Inlin-Craft/tree/craft3).*
 
 Usage
 ---

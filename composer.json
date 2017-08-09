@@ -1,0 +1,50 @@
+{
+    "name": "aelvan/inlin",
+    "description": "A simple plugin for inlining stuff in your templates.",
+    "type": "craft-plugin",
+    "version": "2.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "inline",
+        "inlining",
+        "svg",
+        "criticalcss"
+    ],
+    "support": {
+        "docs": "https://github.com/aelvan/inlin/blob/craft3/README.md",
+        "issues": "https://github.com/aelvan/inlin/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "André Elvan",
+            "homepage": "https://www.vaersaagod.no"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "~3.0.0-beta.23"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "aelvan\\inlin\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Inlin",
+        "handle": "inlin",
+        "schemaVersion": "2.0.0",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/aelvan/inlin/craft3/CHANGELOG.md",
+        "class": "aelvan\\inlin\\Inlin"
+    }
+}

@@ -1,7 +1,25 @@
-Inlin for Craft 3
+Inlin for Craft
 ===========
-
 A tiny plugin for inlining files in Craft templates.
+
+
+Requirements
+---
+This plugin requires Craft CMS 3.0.0-beta.23 or later.
+
+Installation
+---
+To install the plugin, follow these instructions.
+
+1. Open your terminal and go to your Craft project:
+
+        cd /path/to/project
+
+2. Then tell Composer to load the plugin:
+
+        composer require aelvan/inlin
+
+3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Inlin.
 
 
 Usage
@@ -33,15 +51,16 @@ In case you're thinking "meh", insert this into your template:
 Configuration
 ---
 Inlin needs to know the public document root to know where your files are located. By default
-Inlin will use $_SERVER['DOCUMENT_ROOT'], but on some server configurations this is not the correct
-path. You can configure the path by setting the inlinPublicRoot setting in your config file
-(usually found in /craft/config/general.php)
+Inlin will use `$_SERVER['DOCUMENT_ROOT']`, but on some server configurations this is not the correct
+path. You can configure the path by creating a config file called `inline.php` in your config folder, 
+and adding the `publicRoot` setting.
 
 ####Example
 
-    'inlinPublicRoot' => '/path/to/website/public/',
+    'publicRoot' => '/path/to/website/public/',
 
 
 Changelog
 ---
-See [releases.json](https://raw.githubusercontent.com/aelvan/Inlin-Craft/craft3/releases.json).
+### Version 2.0
+ - Initial Craft 3 release

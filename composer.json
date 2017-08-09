@@ -14,8 +14,8 @@
         "criticalcss"
     ],
     "support": {
-        "docs": "https://github.com/aelvan/inlin/blob/craft3/README.md",
-        "issues": "https://github.com/aelvan/inlin/issues"
+        "docs": "https://github.com/aelvan/Inlin-Craft/blob/craft3/README.md",
+        "issues": "https://github.com/aelvan/Inlin-Craft/issues"
     },
     "license": "MIT",
     "authors": [
@@ -44,7 +44,7 @@
         "schemaVersion": "2.0.0",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/aelvan/inlin/craft3/CHANGELOG.md",
+        "changelogUrl": "https://github.com/aelvan/Inlin-Craft/blob/craft3/CHANGELOG.md",
         "class": "aelvan\\inlin\\Inlin"
     }
 }

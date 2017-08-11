@@ -56,7 +56,7 @@ Inlin will use `$_SERVER['DOCUMENT_ROOT']`, but on some server configurations th
 path. You can configure the path by creating a config file called `inline.php` in your config folder, 
 and adding the `publicRoot` setting.
 
-####Example
+#### Example
 
     'publicRoot' => '/path/to/website/public/',
 

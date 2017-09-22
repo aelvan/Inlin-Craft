@@ -3,21 +3,41 @@ namespace Craft;
 
 class InlinVariable
 {
-	public function er($fileName, $remote = false)
+	protected $inlinPublicRoot;
+	public $cacheDuration;
+
+	public function init()
 	{
-		$documentRoot = craft()->inlin->getSetting('inlinPublicRoot')!=null ? craft()->inlin->getSetting('inlinPublicRoot') : $_SERVER['DOCUMENT_ROOT'];
+		$settings = craft()->plugins->getPlugin('inlin')->getSettings();
+
+		$this->inlinPublicRoot = $settings->inlinPublicRoot;
+		$this->cacheDuration = $settings->cacheDuration;
+	}
+
+	public function er($fileName, $remote = false, $cache = true)
+	{
+		$documentRoot = $this->inlinPublicRoot != null && $this->inlinPublicRoot != '' ? $this->inlinPublicRoot : $_SERVER['DOCUMENT_ROOT'];
 		$filePath = $documentRoot . $fileName;
 
 		if ($fileName !== '' && file_exists($filePath)) {
 
 			$content = @file_get_contents($filePath);
-			return $content;
+			return TemplateHelper::getRaw($content);
 
 		} else if ($remote) {
 
-			$content = @file_get_contents($fileName);
-			return $content;
+			$cached = craft()->cache->get($fileName);
 
+			if ($cache && $cached) {
+				return TemplateHelper::getRaw($cached);
+			} else {
+				$content = @file_get_contents($fileName);
+				if ($cache) {
+					craft()->cache->set($fileName, $content, $this->cacheDuration);
+				}
+
+				return TemplateHelper::getRaw($content);
+			}
 		} else {
 			return '';
 		}

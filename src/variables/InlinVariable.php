@@ -10,6 +10,7 @@
 
 namespace aelvan\inlin\variables;
 
+use Craft;
 use aelvan\inlin\Inlin;
 
 class InlinVariable
@@ -24,8 +25,8 @@ class InlinVariable
      */
     public function er($fileName, $remote = false): string
     {
-        $documentRoot = Inlin::getInstance()->getSettings()->publicRoot ?? $_SERVER['DOCUMENT_ROOT'];
-        $filePath = $this->_removeDoubleSlashes($documentRoot.'/'.$fileName);
+        $webroot = Craft::getAlias('@webroot');
+        $filePath = $this->_removeDoubleSlashes($webroot.'/'.$fileName);
 
         if ($remote) {
             $content = @file_get_contents($fileName);
@@ -38,8 +39,6 @@ class InlinVariable
 
             return $content;
         }
-
-        return '';
     }
 
     /**

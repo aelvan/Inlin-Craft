@@ -39,8 +39,6 @@ class InlinVariable
 
             return $content;
         }
-
-        return '';
     }
 
     /**

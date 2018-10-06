@@ -2,7 +2,7 @@
     "name": "aelvan/inlin",
     "description": "A simple plugin for inlining stuff in your templates.",
     "type": "craft-plugin",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "keywords": [
         "craft",
         "cms",

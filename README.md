@@ -6,7 +6,7 @@ A tiny plugin for inlining files in Craft templates.
 
 Requirements
 ---
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+This plugin requires Craft CMS 3.0.0 or later.
 
 Installation
 ---
@@ -44,7 +44,7 @@ is a potential security risk. And the path is relative to your document root, so
 file anywhere on your server. **Make sure you never, ever let a third party control what is inserted.**
 In case you're thinking "meh", insert this into your template:
 
-    {{ craft.inlin.er('/../craft/config/db.php') | raw }}
+    {{ craft.inlin.er('/../config/db.php') | raw }}
 
 *"With great power, comes great responsibility" -Voltaire*
 
@@ -52,7 +52,7 @@ In case you're thinking "meh", insert this into your template:
 Configuration
 ---
 Inlin needs to know the public document root to know where your files are located. By default
-Inlin will use `$_SERVER['DOCUMENT_ROOT']`, but on some server configurations this is not the correct
+Inlin will use `@webroot`, but on some server configurations this is not the correct
 path. You can configure the path by creating a config file called `inline.php` in your config folder, 
 and adding the `publicRoot` setting.
 

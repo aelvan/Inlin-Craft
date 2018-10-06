@@ -24,7 +24,7 @@ class InlinVariable
      */
     public function er($fileName, $remote = false): string
     {
-        $documentRoot = Inlin::getInstance()->getSettings()->publicRoot ?? $_SERVER['DOCUMENT_ROOT'];
+        $documentRoot = \Yii::getAlias(Inlin::getInstance()->getSettings()->publicRoot ?? '@webroot');
         $filePath = $this->_removeDoubleSlashes($documentRoot.'/'.$fileName);
 
         if ($remote) {

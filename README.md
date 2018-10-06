@@ -60,8 +60,3 @@ and adding the `publicRoot` setting.
 
     'publicRoot' => '/path/to/website/public/',
 
-
-Changelog
----
-### Version 2.0
- - Initial Craft 3 release

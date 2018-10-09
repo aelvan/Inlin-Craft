@@ -27,7 +27,11 @@ Usage
 ---
 Use it like this:
 
-    <script src="{{ craft.inlin.er('/build/svg/my.svg') | raw }}"></script>
+    {{ craft.inlin.er('/build/svg/my.svg') | raw }}
+    
+    <script>{{ craft.inlin.er('/build/js/my.js') | raw }}</script>
+    
+    <style type="text/css">{{ craft.inlin.er('/build/css/my.css') | raw }}</style>
 
 Why? [Sometimes](http://css-tricks.com/svg-sprites-use-better-icon-fonts/) it
 [makes sense](http://www.yottaa.com/blog/bid/306224/Inlining-for-Performance-When-to-Let-the-Cache-Go),
